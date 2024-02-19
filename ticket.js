@@ -35,16 +35,16 @@ for (const set of allSet) {
             const prices = document.getElementById('total-prices');
             const pricestring = prices.innerText;
             const pricevalue = parseInt(pricestring);
-            const pricefull = pricevalue + perSeat;            
+            const pricefull = pricevalue + perSeat;
             const totalPriceElement = document.getElementById('total-prices');
             totalPriceElement.innerText = pricefull;
 
             //  grand-total
-            
-             const grandprice = document.getElementById('grand-total');
+
+            const grandprice = document.getElementById('grand-total');
             const grandpricestring = prices.innerText;
             const grandpricevalue = parseInt(pricestring);
-            const grandpricefull = pricevalue + perSeat;            
+            const grandpricefull = pricevalue + perSeat;
             const grandpriceElement = document.getElementById('grand-total');
             grandpriceElement.innerText = grandpricefull;
 
@@ -73,31 +73,37 @@ function applyDiscount() {
     const grandstring = grandprice.innerText;
     const grantvalue = parseInt(grandstring);
     if (inputvalue === "NEW15") {
-        let percen = 15 ;
-       const discountvalue = (percen / 100)* grantvalue;
-       const finalvalue = grantvalue - discountvalue;
-       const grandpriceElements = document.getElementById('grand-total');
-            grandpriceElements.innerText = finalvalue;
+        let percen = 15;
+        const discountvalue = (percen / 100) * grantvalue;
+        const finalvalue = grantvalue - discountvalue;
+        const grandpriceElements = document.getElementById('grand-total');
+        grandpriceElements.innerText = finalvalue;
+        const value = document.getElementById('hidden')
+        value.classList.add('hidden')
+
 
     }
+
     if (inputvalue === "Couple 20") {
-        let percen = 20 ;
-       const discountvalue = (percen / 100)* grantvalue;
-       const finalvalue = grantvalue - discountvalue;
-       const grandpriceElements = document.getElementById('grand-total');
-            grandpriceElements.innerText = finalvalue;
-
+        let percen = 20;
+        const discountvalue = (percen / 100) * grantvalue;
+        const finalvalue = grantvalue - discountvalue;
+        const grandpriceElements = document.getElementById('grand-total');
+        grandpriceElements.innerText = finalvalue;
+        const value = document.getElementById('hidden')
+        value.classList.add('hidden')
     }
+
 }
 
 function openModal() {
     const modal = document.getElementById('my_modal_1');
     modal.showModal();
-  }
+}
 
-  // Function to close the modal
-  function closeModal() {
+// Function to close the modal
+function closeModal() {
     const modal = document.getElementById('my_modal_1');
     modal.close();
-  }
+}
 

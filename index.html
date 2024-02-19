@@ -68,7 +68,7 @@
                             app. The <br>
                             integrated testing features allow for a streamlined .
                         </p>
-                        <button class="btn bg-lime-500 border-none px-3 font-bold">Buy Tickets</button>
+                        <button  onclick="scrollToSection()" class="btn bg-lime-500 border-none px-3 font-bold">Buy Tickets</button>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@
             </div>
         </section>
         <!-- from-section -->
-        <section class="border-t-2 border-lime-400 rounded-full mt-20 bg-[#F7F8F8] ">
+        <section  class="border-t-2 border-lime-400 rounded-full mt-20 bg-[#F7F8F8] ">
             <div class="text-center mt-20">
                 <h1 class="font-bold text-3xl">P.H Paribahan</h1>
                 <p class="text-gray-300 mt-2">Yes, you can run unit tests and view the results directly within the app.
@@ -167,7 +167,7 @@
 
 
             <!-- select-your-seat-section -->
-            <div class="lg:flex justify-center gap-1 bg-white p-5 rounded-lg">
+            <div id="ticket-section" class="lg:flex justify-center gap-1 bg-white p-5 rounded-lg">
                 <div class="w-1/2 mx-auto">
                     <h1 class="font-bold text-xl">Select Your Seat</h1>
                     <div class="w-full border-b-2 border-gray-600 my-5"></div>
@@ -301,7 +301,7 @@
                                 <h1 class="font-bold text-xl">Total Tk </h1>
                                 <h1 class="font-bold text-xl">BDT: <span id="total-prices">0</span></h1>
                             </div>
-                            <div class="w-full mt-3">
+                            <div id="hidden" class="w-full mt-3 ">
                                 <input id="discount-id" class="px-8 py-5 rounded-lg" type="text"
                                     placeholder="Have any coupon?">
                                 <button onclick="applyDiscount()"
@@ -401,6 +401,13 @@
         </nav>
     </footer>
     <script src="ticket.js"></script>
+    <script>
+        function scrollToSection() {
+            const section = document.getElementById('ticket-section');
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
 </body>
 
 </html>
